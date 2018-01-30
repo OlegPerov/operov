@@ -1,8 +1,10 @@
 package ru.job4j.loop;
 
 import org.junit.Test;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -16,10 +18,10 @@ import static org.junit.Assert.assertThat;
 
 public class CounterTest {
     @Test
-public void whenSumEvenNumbersFromOneToTenThenThirty() {
+    public void whenSumEvenNumbersFromOneToTenThenThirty() {
 
-    Counter sum = new Counter();
-    int result = sum.add(0,10);
-    assertThat(result, is(30));
-}
+        Counter sum = new Counter();
+        int result = sum.add(0, 10);
+        assertThat(result, is(30));
+    }
 }

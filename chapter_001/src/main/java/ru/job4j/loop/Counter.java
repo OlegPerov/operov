@@ -1,29 +1,24 @@
 package ru.job4j.loop;
 
 
-
 /**
  * @author Oleg Perov(fg12g@mail.ru)
-
  * @version $Id$
- 
  * @since 0.1
- 
  */
-
 
 
 public class Counter {
     /**
-     * Диапазону значений от start до finish 
+     * Р”РёР°РїР°Р·РѕРЅ Р·РЅР°С‡РµРЅРёР№ РѕС‚ start РґРѕ finish
      *
-     * @return  должен вернуть сумму чётных чисел, равную 30
+     * @return РІРѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ С‡С‘С‚РЅС‹С… С‡РёСЃРµР», СЂР°РІРЅСѓСЋ 30
      */
     public int add(int start, int finish) {
         int number = 0;
-              for (int i = start; i <= finish;i+=2) {
-                   number = number + i;
-         }
-                  return number;
+        for (int i = start; i <= finish; i += 2) {
+            number = number + i;
+        }
+        return number;
     }
 }
