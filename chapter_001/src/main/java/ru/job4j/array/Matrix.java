@@ -15,14 +15,13 @@ public class Matrix {
      *
      * @return должен вернуть Матрицу  в виде таблицы умножения.
      */
-
     public int[][] multiple(int size) {
 
         int[][] array = new int[size][size];
 
-        for (int i = 1; i != array.length; i++) {
-            for (int j = 1; j != array.length; j++) {
-                array[i][j] = i * j;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                array[i][j] = (i + 1) * (j + 1);
             }
         }
         return array;
