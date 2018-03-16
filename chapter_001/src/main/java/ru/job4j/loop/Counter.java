@@ -1,6 +1,8 @@
 package ru.job4j.loop;
 
 
+import ru.job4j.array.Square;
+
 /**
  * @author Oleg Perov(fg12g@mail.ru)
  * @version $Id$
@@ -15,10 +17,11 @@ public class Counter {
      * @return возвращает сумму чётных чисел, равную 30
      */
     public int add(int start, int finish) {
-        int number = 0;
-        for (int i = start; i <= finish; i += 2) {
-            number = number + i;
+        int summa = 0;
+        for (int i = start; i <= finish; i++) {
+            if (i % 2 == 0)
+                summa = summa + i;
         }
-        return number;
+        return summa;
     }
 }
