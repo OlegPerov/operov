@@ -14,9 +14,7 @@ public class Turn {
      *
      * @return должен перевернуть массив задом наперёд.
      */
-
     public int[] back(int[] array) {
-
         int index = 0;
         for (int i = 0; i < array.length / 2; i++) {
             index = array[i];
@@ -24,8 +22,6 @@ public class Turn {
             array[array.length - 1 - i] = index;
         }
         return array;
-
     }
-
 }
 
