@@ -21,4 +21,26 @@ public class CharTest {
         boolean result = word.contains("Привет", "иве");
         assertThat(result, is(true));
     }
+
+    @Test
+    public void whenContainsOriginSubThenTruOne() {
+        Char word = new Char();
+        boolean result = word.contains("Привет", "ет");
+        assertThat(result, is(true));
     }
+
+    @Test
+    public void whenContainsOriginSubThenTrueTwo() {
+        Char word = new Char();
+        boolean result = word.contains("Привет", "кр");
+        assertThat(result, is(false));
+    }
+
+    @Test
+    public void whenContainsOriginSubThenTrueThree() {
+        Char word = new Char();
+        boolean result = word.contains("Привет", "Т");
+        assertThat(result, is(false));
+    }
+
+}
