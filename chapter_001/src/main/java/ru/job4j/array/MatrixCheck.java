@@ -16,15 +16,18 @@ public class MatrixCheck {
      * @return должен проверить, что все элементы по диагоналям равны true или false.
      */
     public boolean mono(boolean[][] data) {
-        boolean result = true;
-        for (int i = 0; i < data.length; i++) {
-            result = result & (data[i][i] == true);
+
+        boolean toright, toleft;
+        toright = true;
+        toleft = true;
+        for (int i=0; i<data.length; i++) {
+            toright &= (data[i][i] == true);
+            toleft &= (data[data.length-i-1][i] == false);
         }
-        if (result)
-            return true;
-        {
-        }
-        return result;
+
+        if (toright || toleft) return true;
+
+        return false;
     }
 }
 
