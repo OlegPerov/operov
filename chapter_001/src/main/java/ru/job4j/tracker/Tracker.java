@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import ru.job4j.models.Item;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -66,20 +67,14 @@ public class Tracker {
                 list.add(item);
             }
         }
-        return list;
+        return Arrays.asList(items);
     }
 
     //получение списка всех заявок
     public Item[] findAll() {
-        int index = 0;
-        while (items[index] != null) {
-            index++;
-        }
-        Item[] result = new Item[index];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = items[i];
-        }
-        return result;
+          int index = 0;
+          Item[] result = Arrays.copyOf(items,index);
+          return result;
     }
 
     //редактирование заявок
