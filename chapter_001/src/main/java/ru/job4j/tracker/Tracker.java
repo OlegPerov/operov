@@ -60,20 +60,19 @@ public class Tracker {
     }
 
     //получение списка по имени - public Item[] findByName(String key);
-    public List<Item> findByName(String key) {
+    public Item[] findByName(String key) {
         List<Item> list = new ArrayList<>();
         for (Item item : items) {
             if (item != null && item.getName().equals(key)) {
                 list.add(item);
             }
         }
-        return Arrays.asList(items);
+        return items;
     }
 
     //получение списка всех заявок
     public Item[] findAll() {
-          int index = 0;
-          Item[] result = Arrays.copyOf(items,index);
+          Item[] result = Arrays.copyOf(items,position);
           return result;
     }
 
