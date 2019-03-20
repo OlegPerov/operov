@@ -61,14 +61,32 @@ public class Tracker {
 
     //получение списка по имени - public Item[] findByName(String key);
     public Item[] findByName(String key) {
-        List<Item> list = new ArrayList<>();
-        for (Item item : items) {
-            if (item != null && item.getName().equals(key)) {
-                list.add(item);
+        int index = 0;
+        Item[] result = null;
+        for (int i = 0; i < findAll().length; i++) {
+            if (findAll()[i].getName().equals(key)) {
+                index++;
             }
         }
-        return items;
+        if (index > 0) {
+            result = new Item[index];
+            for (int i = 0; i < index; i++) {
+                if (findAll()[i].getName().equals(key)) {
+                    result[i] = findAll()[i];
+                }
+            }
+        }
+        return result;
     }
+        //List<Item> list = new ArrayList<>();
+       // for (Item item : items) {
+       //     if (item != null && item.getName().equals(key)) {
+       //         list.add(item);
+       //     }
+
+      //  }
+      //  return r;
+    //}
 
     //получение списка всех заявок
     public Item[] findAll() {
@@ -81,9 +99,9 @@ public class Tracker {
         for (int i = 0; i < items.length; i++) {
             if (findByld(id).equals(items[i])) {
                 items[i] = item;
-                break;
+                return true;
             }
-            return true;
+
         }
         return false;
     }
